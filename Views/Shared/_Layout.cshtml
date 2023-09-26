@@ -10,7 +10,31 @@
 
 
 </head>
-<body>
+<body id="top">
+<header id="header">
+    <a href="#" class="image avatar"> 
+        <img src="~/images/avatar.jpg" alt=""/>
+    </a>
+    <h1>
+            Im Soheil Yazdi<br>
+       <div>Im Programmer And I Learn Pyhton And Csharp</div>
+            <strong>Asp.NetCore</strong><br>
+   
+       
+    </h1>
+
+    @* Link Generation Using Url.Action *@
+    @*<a href="@Url.Action("Index", "Home")" style="margin-left: 10px;">صفحه اصلی</a>
+        <a href="@Url.Action("Contact", "Home")">تماس با من</a>*@
+
+    @* Link Generation Using Tag Helpers *@
+        <a asp-controller="Home" asp-action="Index" style="margin-left: 50px" ;>Home </a><br>
+        <a asp-controller="Home" asp-action="Contact">Contact</a>
+
+</header>
+<dive id="main">
+    @RenderBody()
+</dive>
     <footer id="footer">
         <ul class="icons">
             <li>
